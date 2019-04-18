@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Intelli Home Solutions</title>
+</head>
+<body>
+    <div class="jumbotron text-xs-center">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+            </li>
+            <% if (user) {%>
+            <li class="nav-item">
+                <a class="nav-link" href="/auth/logout">Logout</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item">
+                <a class="nav-link" href="/auth/login">Login</a>
+            </li>
+            <% } %>
+            <li class="nav-item">
+                <a class="nav-link" href="/profile">Profile</a>
+            </li>
+        </ul>
+        <h1 class="d-flex justify-content-center">Intelli Home Automation & Solutions</h1>
+        <hr>
+        <h1 class="display-3 d-flex justify-content-center">Welcome!</h1>
+        <p class="lead d-flex justify-content-center"><strong>Please SignUp</strong> for further instructions on how to complete your account setup.</p>
+        <hr>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg d-flex justify-content-center" href="/auth/login" role="button">Login</a>
+        </p>
+        <p>
+            Having trouble? <a href="">Contact us</a>
+        </p>
+    </div>
+</body>
+</html>
